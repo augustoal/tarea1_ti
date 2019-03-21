@@ -12,13 +12,13 @@
 <p><b>Residents:</b></p>
 <ul>
   <%for (var i=0; i < informacion.residents.length; i++){%>
-    <li><a href="/<%=informacion.residents[i].split("/").slice(-3,-1)%>"><%=informacion.residents[i]%></a></li>
+    <li><a class="people" id="<%=informacion.residents[i]%>" href="/detalle/<%=informacion.residents[i].split("/").slice(-3,-1)%>"><%=informacion.residents[i]%></a></li>
   <%}%>
 </ul>
 <p><b>Films:</b></p>
 <ul>
   <%for (var i=0; i < informacion.films.length; i++){%>
-    <li><a href="/<%=informacion.films[i].split("/").slice(-3,-1)%>"><%=informacion.films[i]%></a></li>
+    <li><a class="films" id="<%=informacion.films[i]%>" href="/detalle/<%=informacion.films[i].split("/").slice(-3,-1)%>"><%=informacion.films[i]%></a></li>
   <%}%>
 </ul>
 <p>Created: <%=informacion.created%></p>

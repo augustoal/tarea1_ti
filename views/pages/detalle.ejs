@@ -21,9 +21,22 @@
       </div>
       <br>
       <a class="btn btn-outline-primary" href="/" role="button">Home</a>
+      <a class="btn btn-outline-secondary" onclick="atras()" role="button">Back</a>
+      <br>
+      <p> </p>
+      <form class="form-group form-inline" action="/busqueda" method="get">
+        <div class="col-auto">
+          <input type="text" class="form-control" id="search" name="search_term" placeholder="Search">
+        </div>
+        <div class="col-auto">
+          <button type="submit" class="btn btn-primary">Search</button>
+        </div>
+      </form>
       <hr>
     </div>
     <div class="col-md-3">
     </div>
   </div>
+
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

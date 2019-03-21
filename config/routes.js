@@ -20,8 +20,8 @@ module.exports.routes = {
   ***************************************************************************/
 
   'GET /': { action: 'inicio' },
-  'GET /:elemento': { action: 'detalle'},
-  'GET /busqueda/:elemento': { action: 'busqueda'}
+  'GET /detalle/:elemento': { action: 'detalle'},
+  'GET /busqueda:elemento?': { action: 'busqueda'}
 
 
 

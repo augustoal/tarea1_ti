@@ -7,19 +7,19 @@
 <p><b>Actors:</b></p>
 <ul>
   <%for (var i=0; i < informacion.characters.length; i++){%>
-    <li><a href="/<%=informacion.characters[i].split("/").slice(-3,-1)%>"><%=informacion.characters[i]%></a></li>
+    <li><a class="people" id="<%=informacion.characters[i]%>" href="/detalle/<%=informacion.characters[i].split("/").slice(-3,-1)%>"><%=informacion.characters[i]%></a></li>
   <%}%>
 </ul>
 <p><b>Planets:</b></p>
 <ul>
   <%for (var i=0; i < informacion.planets.length; i++){%>
-    <li><a href="/<%=informacion.planets[i].split("/").slice(-3,-1)%>"><%=informacion.planets[i]%></a></li>
+    <li><a class="planets" id="<%=informacion.planets[i]%>" href="/detalle/<%=informacion.planets[i].split("/").slice(-3,-1)%>"><%=informacion.planets[i]%></a></li>
   <%}%>
 </ul>
 <p><b>Starships:</b></p>
 <ul>
   <%for (var i=0; i < informacion.starships.length; i++){%>
-    <li><a href="/<%=informacion.starships[i].split("/").slice(-3,-1)%>"><%=informacion.starships[i]%></a></li>
+    <li><a class="starships" id="<%=informacion.starships[i]%>" href="/detalle/<%=informacion.starships[i].split("/").slice(-3,-1)%>"><%=informacion.starships[i]%></a></li>
   <%}%>
 </ul>
 <p>Created: <%=informacion.created%></p>

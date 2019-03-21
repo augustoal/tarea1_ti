@@ -16,13 +16,13 @@
 <p><b>Pilots:</b></p>
 <ul>
   <%for (var i=0; i < informacion.pilots.length; i++){%>
-    <li><a href="/<%=informacion.pilots[i].split("/").slice(-3,-1)%>"><%=informacion.pilots[i]%></a></li>
+    <li><a class="people" id="<%=informacion.pilots[i]%>" href="/detalle/<%=informacion.pilots[i].split("/").slice(-3,-1)%>"><%=informacion.pilots[i]%></a></li>
   <%}%>
 </ul>
 <p><b>Films:</b></p>
 <ul>
   <%for (var i=0; i < informacion.films.length; i++){%>
-    <li><a href="/<%=informacion.films[i].split("/").slice(-3,-1)%>"><%=informacion.films[i]%></a></li>
+    <li><a class="films" id="<%=informacion.films[i]%>" href="/detalle/<%=informacion.films[i].split("/").slice(-3,-1)%>"><%=informacion.films[i]%></a></li>
   <%}%>
 </ul>
 <p>Created: <%=informacion.created%></p>

@@ -1,3 +1,47 @@
-<h1>Resultados de la búsqueda</h1>
+<div class="container">
+<h1>Search results</h1>
 
-<p>Buscaste sobre <%=elemento%></p>
+<h4>You searched: <i><%=busqueda%></i></h4>
+<h4><%=resultados.length%> results</h4>
+
+<%for (var i=0; i<resultados.length; i++){%>
+  <div class="row">
+  <div class="col-md-3">
+  </div>
+  <div class="jumbotron col-md-6">
+  <%if (resultados[i].title){%>
+    <h2><a href='/detalle/<%=resultados[i].url.split("/").slice(-3,-1)%>'><%=resultados[i].title%></a></h2>
+  <%} else if (resultados[i].name){%>
+    <h2><a href='/detalle/<%=resultados[i].url.split("/").slice(-3,-1)%>'><%=resultados[i].name%></a></h2>
+  <%}%>
+  </div>
+  <div class="col-md-3">
+  </div>
+  </div>
+<%}%>
+<br>
+<div class="row">
+  <div class="col-md-3">
+  </div>
+  <div class="col-md-6">
+    <a class="btn btn-outline-primary" href="/" role="button">Home</a>
+    <a class="btn btn-outline-secondary" onclick="atras()" role="button">Back</a>
+    <br>
+    <p> </p>
+    <form class="form-group form-inline" action="/busqueda" method="get">
+      <div class="col-auto">
+        <input type="text" class="form-control" id="search" name="search_term" placeholder="<%=busqueda%>">
+      </div>
+      <div class="col-auto">
+        <button type="submit" class="btn btn-primary">Search</button>
+      </div>
+    </form>
+    <hr>
+  </div>
+  <div class="col-md-3">
+  </div>
+</div>
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

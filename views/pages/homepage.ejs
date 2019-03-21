@@ -7,16 +7,33 @@ For more information, see:
 
 
 <div class="container">
-  <h1>Películas de Star Wars</h1>
+  <h1>Star Wars</h1>
   <%if (!peliculas) {%>
     <h3>Lo lamento, parece que hubo un error en la API</h3>
   <%} else {%>
+    <div class="row">
+      <div class="col-md-3">
+      </div>
+      <div class="col-md-6">
+        <form class="form-group form-inline" action="/busqueda" method="get">
+          <div class="col-auto">
+            <input type="text" class="form-control" id="search" name="search_term" placeholder="Search">
+          </div>
+          <div class="col-auto">
+            <button type="submit" class="btn btn-primary">Search</button>
+          </div>
+        </form>
+        <br>
+      </div>
+      <div class="col-md-3">
+      </div>
+    </div>
     <%for(var i=0; i<peliculas.length; i++){%>
       <div class = "row">
         <div class="col-md-3">
         </div>
         <div class="col-md-6">
-          <div class="pelicula jumbotron" onclick="window.location='/<%=peliculas[i].url.split("/").slice(-3,-1)%>';">
+          <div class="pelicula jumbotron" onclick="window.location='/detalle/<%=peliculas[i].url.split("/").slice(-3,-1)%>';">
             <h3><%=peliculas[i].title%></h3>
             <p><%=peliculas[i].episode_id%></p>
             <p><%=peliculas[i].release_date%></p>
@@ -31,3 +48,4 @@ For more information, see:
     <%}%>
   <%}%>
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

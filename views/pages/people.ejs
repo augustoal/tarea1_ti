@@ -7,18 +7,18 @@
 <p><b>Eye color:</b> <%=informacion.eye_color%></p>
 <p><b>Birth year:</b> <%=informacion.birth_year%></p>
 <p><b>Gender:</b> <%=informacion.gender%></p>
-<p><b>Homeworld:</b> <a href="/<%=informacion.homeworld.split("/").slice(-3,-1)%>"><%=informacion.homeworld%></a></p>
+<p><b>Homeworld:</b> <a class="planets" id="<%=informacion.homeworld%>" href="/detalle/<%=informacion.homeworld.split("/").slice(-3,-1)%>"><%=informacion.homeworld%></a></p>
 
 <p><b>Films:</b></p>
 <ul>
   <%for (var i=0; i < informacion.films.length; i++){%>
-    <li><a href="/<%=informacion.films[i].split("/").slice(-3,-1)%>"><%=informacion.films[i]%></a></li>
+    <li><a class="films" id="<%=informacion.films[i]%>" href="/detalle/<%=informacion.films[i].split("/").slice(-3,-1)%>"><%=informacion.films[i]%></a></li>
   <%}%>
 </ul>
 <p><b>Starships:</b></p>
 <ul>
   <%for (var i=0; i < informacion.starships.length; i++){%>
-    <li><a href="/<%=informacion.starships[i].split("/").slice(-3,-1)%>"><%=informacion.starships[i]%></a></li>
+    <li><a class="planets" id="<%=informacion.starships[i]%>" href="/detalle/<%=informacion.starships[i].split("/").slice(-3,-1)%>"><%=informacion.starships[i]%></a></li>
   <%}%>
 </ul>
 <p>Created: <%=informacion.created%></p>
