@@ -1,0 +1,25 @@
+<h1><%=informacion.name%></h1>
+
+<p><b>Height:</b> <%=informacion.height%></p>
+<p><b>Mass:</b> <%=informacion.mass%></p>
+<p><b>Hair color:</b> <%=informacion.hair_color%></p>
+<p><b>Skin color:</b> <%=informacion.skin_color%></p>
+<p><b>Eye color:</b> <%=informacion.eye_color%></p>
+<p><b>Birth year:</b> <%=informacion.birth_year%></p>
+<p><b>Gender:</b> <%=informacion.gender%></p>
+<p><b>Homeworld:</b> <a href="/<%=informacion.homeworld.split("/").slice(-3,-1)%>"><%=informacion.homeworld%></a></p>
+
+<p><b>Films:</b></p>
+<ul>
+  <%for (var i=0; i < informacion.films.length; i++){%>
+    <li><a href="/<%=informacion.films[i].split("/").slice(-3,-1)%>"><%=informacion.films[i]%></a></li>
+  <%}%>
+</ul>
+<p><b>Starships:</b></p>
+<ul>
+  <%for (var i=0; i < informacion.starships.length; i++){%>
+    <li><%=informacion.starships[i]%></li>
+  <%}%>
+</ul>
+<p>Created: <%=informacion.created%></p>
+<p>Edited: <%=informacion.edited%></p>

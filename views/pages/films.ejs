@@ -1,0 +1,26 @@
+<h1><%=informacion.title%></h1>
+<p><b>Episode:</b> <%=informacion.episode_id%></p>
+<p><%=informacion.opening_crawl%></p>
+<p><b>Director: </b><%=informacion.director%></p>
+<p><b>Producer(s): </b><%=informacion.producer%></p>
+<p><b>Release date: </b><%=informacion.release_date%></p>
+<p><b>Actors:</b></p>
+<ul>
+  <%for (var i=0; i < informacion.characters.length; i++){%>
+    <li><a href="/<%=informacion.characters[i].split("/").slice(-3,-1)%>"><%=informacion.characters[i]%></a></li>
+  <%}%>
+</ul>
+<p><b>Planets:</b></p>
+<ul>
+  <%for (var i=0; i < informacion.planets.length; i++){%>
+    <li><%=informacion.planets[i]%></li>
+  <%}%>
+</ul>
+<p><b>Starships:</b></p>
+<ul>
+  <%for (var i=0; i < informacion.starships.length; i++){%>
+    <li><%=informacion.starships[i]%></li>
+  <%}%>
+</ul>
+<p>Created: <%=informacion.created%></p>
+<p>Edited: <%=informacion.edited%></p>

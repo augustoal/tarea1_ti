@@ -16,7 +16,7 @@ For more information, see:
         <div class="col-md-3">
         </div>
         <div class="col-md-6">
-          <div class="pelicula jumbotron">
+          <div class="pelicula jumbotron" onclick="window.location='/<%=peliculas[i].url.split("/").slice(-3,-1)%>';">
             <h3><%=peliculas[i].title%></h3>
             <p><%=peliculas[i].episode_id%></p>
             <p><%=peliculas[i].release_date%></p>

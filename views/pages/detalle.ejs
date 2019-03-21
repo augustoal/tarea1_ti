@@ -1,1 +1,23 @@
-<h1><%=nombre%></h1>
+
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+    </div>
+    <div class="col-md-6">
+      <div class="jumbotron">
+        <%if (tipo == 'films'){%>
+          <%- partial('films.ejs')%>
+        <%} else if (tipo == 'people'){%>
+          <%- partial('people.ejs')%>
+        <%}%>
+
+      </div>
+      <br>
+      <a class="btn btn-outline-primary" href="/" role="button">Home</a>
+      <hr>
+    </div>
+    <div class="col-md-3">
+    </div>
+  </div>
+</div>
