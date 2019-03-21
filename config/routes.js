@@ -19,7 +19,10 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  '/': { view: 'pages/homepage' },
+  'GET /': { action: 'inicio' },
+  'GET /:elemento': { action: 'detalle'},
+  'GET /busqueda/:elemento': { action: 'busqueda'}
+
 
 
   /***************************************************************************
