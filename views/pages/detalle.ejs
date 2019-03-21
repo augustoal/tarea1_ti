@@ -10,6 +10,12 @@
           <%- partial('films.ejs')%>
         <%} else if (tipo == 'people'){%>
           <%- partial('people.ejs')%>
+        <%} else if (tipo == 'planets'){%>
+          <%- partial('planets.ejs')%>
+        <%} else if (tipo == 'starships'){%>
+          <%- partial('starships.ejs')%>
+        <%} else {%>
+          <h2>404 Not found</h2>
         <%}%>
 
       </div>

@@ -1,0 +1,26 @@
+<h1><%=informacion.name%></h1>
+
+<p><b>Rotation period:</b> <%=informacion.rotation_period%></p>
+<p><b>Orbital period:</b> <%=informacion.orbital_period%></p>
+<p><b>Diameter:</b> <%=informacion.diameter%></p>
+<p><b>Climate:</b> <%=informacion.climate%></p>
+<p><b>Gravity:</b> <%=informacion.gravity%></p>
+<p><b>Terrain:</b> <%=informacion.terrain%></p>
+<p><b>Surface water:</b> <%=informacion.surface_water%></p>
+<p><b>Population:</b> <%=informacion.population%></p>
+
+<p><b>Residents:</b></p>
+<ul>
+  <%for (var i=0; i < informacion.residents.length; i++){%>
+    <li><a href="/<%=informacion.residents[i].split("/").slice(-3,-1)%>"><%=informacion.residents[i]%></a></li>
+  <%}%>
+</ul>
+<p><b>Films:</b></p>
+<ul>
+  <%for (var i=0; i < informacion.films.length; i++){%>
+    <li><a href="/<%=informacion.films[i].split("/").slice(-3,-1)%>"><%=informacion.films[i]%></a></li>
+  <%}%>
+</ul>
+<p>Created: <%=informacion.created%></p>
+<p>Edited: <%=informacion.edited%></p>
+<p>Url: <a href="<%=informacion.url%>"><%=informacion.url%></a></p>

@@ -18,8 +18,9 @@
 <p><b>Starships:</b></p>
 <ul>
   <%for (var i=0; i < informacion.starships.length; i++){%>
-    <li><%=informacion.starships[i]%></li>
+    <li><a href="/<%=informacion.starships[i].split("/").slice(-3,-1)%>"><%=informacion.starships[i]%></a></li>
   <%}%>
 </ul>
 <p>Created: <%=informacion.created%></p>
 <p>Edited: <%=informacion.edited%></p>
+<p>Url: <a href="<%=informacion.url%>"><%=informacion.url%></a></p>
