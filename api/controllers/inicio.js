@@ -20,9 +20,19 @@ module.exports = {
 
 
   fn: async function (inputs, exits) {
+    var request = require('request');
 
-    // All done.
-    return exits.success();
+    request.get({url: 'https://swapi.co/api/films'}, function(error, respuesta) {
+      if (error) {
+        console.log(error);
+        var peliculas = null;
+        return exits.success({peliculas: peliculas});
+      }
+      else {
+        var peliculas = JSON.parse(respuesta.body).results;
+        return exits.success({peliculas: peliculas});
+      }
+    });
 
   }
 
