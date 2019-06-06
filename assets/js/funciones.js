@@ -19,17 +19,17 @@ function encontrar_titulo(elemento){
 }
 
 $(document).ready(function(){
-  $('.people').each(function(){
-    encontrar_nombre($(this));
-  })
-  $('.planets').each(function(){
-    encontrar_nombre($(this));
-  })
-  $('.starships').each(function(){
-    encontrar_nombre($(this));
-  })
-  $('.films').each(function(){
-    encontrar_titulo($(this));
-  })
+  // $('.people').each(function(){
+  //   encontrar_nombre($(this));
+  // })
+  // $('.planets').each(function(){
+  //   encontrar_nombre($(this));
+  // })
+  // $('.starships').each(function(){
+  //   encontrar_nombre($(this));
+  // })
+  // $('.films').each(function(){
+  //   encontrar_titulo($(this));
+  // })
 
 });

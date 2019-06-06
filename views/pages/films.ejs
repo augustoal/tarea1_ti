@@ -1,27 +1,27 @@
 <h1><%=informacion.title%></h1>
-<p><b>Episode:</b> <%=informacion.episode_id%></p>
-<p><%=informacion.opening_crawl%></p>
+<p><b>Episode:</b> <%=informacion.episodeID%></p>
+<p><%=informacion.openingCrawl%></p>
 <p><b>Director: </b><%=informacion.director%></p>
-<p><b>Producer(s): </b><%=informacion.producer%></p>
-<p><b>Release date: </b><%=informacion.release_date%></p>
+<p><b>Producer(s): </b><%=informacion.producers%></p>
+<p><b>Release date: </b><%=informacion.releaseDate%></p>
 <p><b>Actors:</b></p>
 <ul>
-  <%for (var i=0; i < informacion.characters.length; i++){%>
-    <li><a class="people" id="<%=informacion.characters[i]%>" href="/detalle/<%=informacion.characters[i].split("/").slice(-3,-1)%>"><%=informacion.characters[i]%></a></li>
+  <%for (var i=0; i < informacion.characterConnection.characters.length; i++){%>
+    <li><a class="people" id="<%=informacion.characterConnection.characters[i].id%>" href="/detalle/people,<%=informacion.characterConnection.characters[i].id%>"><%=informacion.characterConnection.characters[i].name%></a></li>
   <%}%>
 </ul>
 <p><b>Planets:</b></p>
 <ul>
-  <%for (var i=0; i < informacion.planets.length; i++){%>
-    <li><a class="planets" id="<%=informacion.planets[i]%>" href="/detalle/<%=informacion.planets[i].split("/").slice(-3,-1)%>"><%=informacion.planets[i]%></a></li>
+  <%for (var i=0; i < informacion.planetConnection.planets.length; i++){%>
+    <li><a class="planets" id="<%=informacion.planetConnection.planets[i].id%>" href="/detalle/planets,<%=informacion.planetConnection.planets[i].id%>"><%=informacion.planetConnection.planets[i].name%></a></li>
   <%}%>
 </ul>
 <p><b>Starships:</b></p>
 <ul>
-  <%for (var i=0; i < informacion.starships.length; i++){%>
-    <li><a class="starships" id="<%=informacion.starships[i]%>" href="/detalle/<%=informacion.starships[i].split("/").slice(-3,-1)%>"><%=informacion.starships[i]%></a></li>
+  <%for (var i=0; i < informacion.starshipConnection.starships.length; i++){%>
+    <li><a class="starships" id="<%=informacion.starshipConnection.starships[i].id%>" href="/detalle/starships,<%=informacion.starshipConnection.starships[i].id%>"><%=informacion.starshipConnection.starships[i].name%></a></li>
   <%}%>
 </ul>
 <p>Created: <%=informacion.created%></p>
 <p>Edited: <%=informacion.edited%></p>
-<p>Url: <a href="<%=informacion.url%>"><%=informacion.url%></a></p>
+<p>ID: <%=informacion.id%></p>

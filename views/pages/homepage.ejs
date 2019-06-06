@@ -12,6 +12,7 @@ For more information, see:
   <%if (!peliculas) {%>
     <h3>Lo lamento, parece que hubo un error en la API</h3>
   <%} else {%>
+    <!--
     <div class="row">
       <div class="col-md-3">
       </div>
@@ -29,17 +30,18 @@ For more information, see:
       <div class="col-md-3">
       </div>
     </div>
+    -->
     <%for(var i=0; i<peliculas.length; i++){%>
       <div class = "row">
         <div class="col-md-3">
         </div>
         <div class="col-md-6">
-          <div class="pelicula jumbotron" onclick="window.location='/detalle/<%=peliculas[i].url.split("/").slice(-3,-1)%>';">
+          <div class="pelicula jumbotron" onclick="window.location='/detalle/films,<%=peliculas[i].episodeID%>';">
             <h3><%=peliculas[i].title%></h3>
-            <p><%=peliculas[i].episode_id%></p>
-            <p><%=peliculas[i].release_date%></p>
+            <p><%=peliculas[i].episodeID%></p>
+            <p><%=peliculas[i].releaseDate%></p>
             <p><%=peliculas[i].director%></p>
-            <p><%=peliculas[i].producer%></p>
+            <p><%=peliculas[i].producers%></p>
             <br>
           </div>
         </div>
