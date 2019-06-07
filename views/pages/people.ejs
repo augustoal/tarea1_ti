@@ -2,25 +2,25 @@
 
 <p><b>Height:</b> <%=informacion.height%></p>
 <p><b>Mass:</b> <%=informacion.mass%></p>
-<p><b>Hair color:</b> <%=informacion.hair_color%></p>
-<p><b>Skin color:</b> <%=informacion.skin_color%></p>
-<p><b>Eye color:</b> <%=informacion.eye_color%></p>
-<p><b>Birth year:</b> <%=informacion.birth_year%></p>
+<p><b>Hair color:</b> <%=informacion.hairColor%></p>
+<p><b>Skin color:</b> <%=informacion.skinColor%></p>
+<p><b>Eye color:</b> <%=informacion.eyeColor%></p>
+<p><b>Birth year:</b> <%=informacion.birthYear%></p>
 <p><b>Gender:</b> <%=informacion.gender%></p>
-<p><b>Homeworld:</b> <a class="planets" id="<%=informacion.homeworld%>" href="/detalle/<%=informacion.homeworld.split("/").slice(-3,-1)%>"><%=informacion.homeworld%></a></p>
+<p><b>Homeworld:</b> <a class="planets" id="<%=informacion.homeworld.id%>" href="/detalle/planets,<%=informacion.homeworld.id%>"><%=informacion.homeworld.name%></a></p>
 
 <p><b>Films:</b></p>
 <ul>
-  <%for (var i=0; i < informacion.films.length; i++){%>
-    <li><a class="films" id="<%=informacion.films[i]%>" href="/detalle/<%=informacion.films[i].split("/").slice(-3,-1)%>"><%=informacion.films[i]%></a></li>
+  <%for (var i=0; i < informacion.filmConnection.films.length; i++){%>
+    <li><a class="films" id="<%=informacion.filmConnection.films[i].episodeID%>" href="/detalle/films,<%=informacion.filmConnection.films[i].episodeID%>"><%=informacion.filmConnection.films[i].title%></a></li>
   <%}%>
 </ul>
 <p><b>Starships:</b></p>
 <ul>
-  <%for (var i=0; i < informacion.starships.length; i++){%>
-    <li><a class="planets" id="<%=informacion.starships[i]%>" href="/detalle/<%=informacion.starships[i].split("/").slice(-3,-1)%>"><%=informacion.starships[i]%></a></li>
+  <%for (var i=0; i < informacion.starshipConnection.starships.length; i++){%>
+    <li><a class="planets" id="<%=informacion.starshipConnection.starships[i].id%>" href="/detalle/starships,<%=informacion.starshipConnection.starships[i].id%>"><%=informacion.starshipConnection.starships[i].name%></a></li>
   <%}%>
 </ul>
 <p>Created: <%=informacion.created%></p>
 <p>Edited: <%=informacion.edited%></p>
-<p>Url: <a href="<%=informacion.url%>"><%=informacion.url%></a></p>
+<p>ID: <%=informacion.id%></p>

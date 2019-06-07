@@ -1,26 +1,26 @@
 <h1><%=informacion.name%></h1>
 
-<p><b>Rotation period:</b> <%=informacion.rotation_period%></p>
-<p><b>Orbital period:</b> <%=informacion.orbital_period%></p>
+<p><b>Rotation period:</b> <%=informacion.rotationPeriod%></p>
+<p><b>Orbital period:</b> <%=informacion.orbitalPeriod%></p>
 <p><b>Diameter:</b> <%=informacion.diameter%></p>
 <p><b>Climate:</b> <%=informacion.climate%></p>
 <p><b>Gravity:</b> <%=informacion.gravity%></p>
 <p><b>Terrain:</b> <%=informacion.terrain%></p>
-<p><b>Surface water:</b> <%=informacion.surface_water%></p>
+<p><b>Surface water:</b> <%=informacion.surfaceWater%></p>
 <p><b>Population:</b> <%=informacion.population%></p>
 
 <p><b>Residents:</b></p>
 <ul>
-  <%for (var i=0; i < informacion.residents.length; i++){%>
-    <li><a class="people" id="<%=informacion.residents[i]%>" href="/detalle/<%=informacion.residents[i].split("/").slice(-3,-1)%>"><%=informacion.residents[i]%></a></li>
+  <%for (var i=0; i < informacion.residentConnection.residents.length; i++){%>
+    <li><a class="people" id="<%=informacion.residentConnection.residents[i].id%>" href="/detalle/people,<%=informacion.residentConnection.residents[i].id%>"><%=informacion.residentConnection.residents[i].name%></a></li>
   <%}%>
 </ul>
 <p><b>Films:</b></p>
 <ul>
-  <%for (var i=0; i < informacion.films.length; i++){%>
-    <li><a class="films" id="<%=informacion.films[i]%>" href="/detalle/<%=informacion.films[i].split("/").slice(-3,-1)%>"><%=informacion.films[i]%></a></li>
+  <%for (var i=0; i < informacion.filmConnection.films.length; i++){%>
+    <li><a class="films" id="<%=informacion.filmConnection.films[i].episodeID%>" href="/detalle/films,<%=informacion.filmConnection.films[i].episodeID%>"><%=informacion.filmConnection.films[i].title%></a></li>
   <%}%>
 </ul>
 <p>Created: <%=informacion.created%></p>
 <p>Edited: <%=informacion.edited%></p>
-<p>Url: <a href="<%=informacion.url%>"><%=informacion.url%></a></p>
+<p>ID: <%=informacion.id%></p>

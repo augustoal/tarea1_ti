@@ -1,30 +1,30 @@
 <h1><%=informacion.name%></h1>
 
 <p><b>Model:</b> <%=informacion.model%></p>
-<p><b>Manufacturer:</b> <%=informacion.manufacturer%></p>
-<p><b>Cost in credits:</b> <%=informacion.cost_in_credits%></p>
+<p><b>Manufacturer:</b> <%=informacion.manufacturers%></p>
+<p><b>Cost in credits:</b> <%=informacion.costInCredits%></p>
 <p><b>Length:</b> <%=informacion.length%></p>
-<p><b>Max atmosphering speed:</b> <%=informacion.max_atmosphering_speed%></p>
+<p><b>Max atmosphering speed:</b> <%=informacion.maxAtmospheringSpeed%></p>
 <p><b>Crew:</b> <%=informacion.crew%></p>
 <p><b>Passengers:</b> <%=informacion.passengers%></p>
-<p><b>Cargo capacity:</b> <%=informacion.cargo_capacity%></p>
+<p><b>Cargo capacity:</b> <%=informacion.cargoCapacity%></p>
 <p><b>Consumables:</b> <%=informacion.consumables%></p>
-<p><b>Hyperdrive rating:</b> <%=informacion.hyperdrive_rating%></p>
-<p><b>MGLT:</b> <%=informacion.MGLTy%></p>
-<p><b>Starship class:</b> <%=informacion.starship_class%></p>
+<p><b>Hyperdrive rating:</b> <%=informacion.hyperdriveRating%></p>
+<p><b>MGLT:</b> <%=informacion.MGLT%></p>
+<p><b>Starship class:</b> <%=informacion.starshipClass%></p>
 
 <p><b>Pilots:</b></p>
 <ul>
-  <%for (var i=0; i < informacion.pilots.length; i++){%>
-    <li><a class="people" id="<%=informacion.pilots[i]%>" href="/detalle/<%=informacion.pilots[i].split("/").slice(-3,-1)%>"><%=informacion.pilots[i]%></a></li>
+  <%for (var i=0; i < informacion.pilotConnection.pilots.length; i++){%>
+    <li><a class="people" id="<%=informacion.pilotConnection.pilots[i].id%>" href="/detalle/people,<%=informacion.pilotConnection.pilots[i].id%>"><%=informacion.pilotConnection.pilots[i].name%></a></li>
   <%}%>
 </ul>
 <p><b>Films:</b></p>
 <ul>
-  <%for (var i=0; i < informacion.films.length; i++){%>
-    <li><a class="films" id="<%=informacion.films[i]%>" href="/detalle/<%=informacion.films[i].split("/").slice(-3,-1)%>"><%=informacion.films[i]%></a></li>
+  <%for (var i=0; i < informacion.filmConnection.films.length; i++){%>
+    <li><a class="films" id="<%=informacion.filmConnection.films[i].episodeID%>" href="/detalle/films,<%=informacion.filmConnection.films[i].episodeID%>"><%=informacion.filmConnection.films[i].title%></a></li>
   <%}%>
 </ul>
 <p>Created: <%=informacion.created%></p>
 <p>Edited: <%=informacion.edited%></p>
-<p>Url: <a href="<%=informacion.url%>"><%=informacion.url%></a></p>
+<p>ID: <%=informacion.id%></p>
